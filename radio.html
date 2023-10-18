@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+  <style>
+    .checkbox-group {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .checkbox-group input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .box-mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border: 1px solid #BFC4D3;
+    border-radius: 2px;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .checkbox-group:hover input ~ .box-mark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .checkbox-group input:checked ~ .box-mark {
+    background-color: #fff;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .box-mark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  
+  /* Show the indicator (dot/circle) when checked */
+  .checkbox-group input:checked ~ .box-mark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .checkbox-group .box-mark:after {
+      top: 2px;
+      left: 9px;
+      width: 6px;
+      height: 14px;
+      border: solid #0079bf;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+  }
+
+
+  </style>
+
+<label class="checkbox-group">Option 1
+  <input type="checkbox" name="radio-group">
+  <span class="box-mark"></span>
+</label>
+
+</body>
+</html>
